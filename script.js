@@ -79,12 +79,12 @@
 //          console.log(`${this.name} was sleeping`)
 //      }
 //  }
- 
+
 // let p1 = new prototypeFun("mahin")
 // let p2 = new prototypeFun("Adib")
 // let p3 = new prototypeFun("hasan")
 // p3.eat()
- 
+
 
 // protype hide master object hide
 // function hideMasterObj (name){
@@ -121,76 +121,98 @@
 // }
 
 
-// function Cricketer(name, age ,type,country){
-//     Person.call(this);
-//     this.name = name;
-//     this.age = age;
-//     this.type = type;
-//     this.country = country;
-// }
-// Cricketer.prototype = Object.create(Person.prototype)
-// Cricketer.prototype.constructor = Cricketer;
+// // function Cricketer(name, age ,type,country){
+// //     Person.call(this);
+// //     this.name = name;
+// //     this.age = age;
+// //     this.type = type;
+// //     this.country = country;
+// // }
+// // Cricketer.prototype = Object.create(Person.prototype)
+// // Cricketer.prototype.constructor = Cricketer;
 
-// Cricketer.prototype = {
-//     play (){
-//         console.log("Cricket")
+// // Cricketer.prototype = {
+// //     play (){
+// //         console.log("Cricket")
+// //     }
+// // }
+
+// // Person.prototype = {
+// //     eat(){
+// //         console.log("Hello i am mahin")
+// //     }
+// // }
+
+// // let p = new Cricketer("mahin",45, "bangla","BD");
+// // console.dir(Person)
+// // console.dir(Cricketer.eat())
+
+
+
+
+// // prototype inheritence
+
+// class Father{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     fathers(){
+//         return `My name is ${this.name}`
 //     }
 // }
 
-// Person.prototype = {
-//     eat(){
-//         console.log("Hello i am mahin")
+
+// class mother extends Father{
+//     constructor(name,age,children){
+//         super(name,age)
+//         this.children = children;
 //     }
+//     mother(){
+//         return `My childs is ${this.children}`
+//     }
+//     // get getName (){
+//     //     console.log("I am getter")
+//     // }
+// //    set setNames (name){
+// //     this.name = name;
+// //    }
+// // static isEqual (class1,class2){
+// //     return class1.age === class2.age
+// // }
+// // polimorfijon
+// fathers(){
+//     super.fathers()
+//     return `My name is ${this.name} . her old is 5`
+// }
 // }
 
-// let p = new Cricketer("mahin",45, "bangla","BD");
-// console.dir(Person)
-// console.dir(Cricketer.eat())
+
+
+// let ClassObj1 = new mother("Babul howlader", 55, 2);
+// let ClassObj2 = new mother("Babul howlader", 55, 2);
+// // ClassObj.setNames = "mahin";
+
+// console.log(ClassObj1.fathers())
 
 
 
 
-// prototype inheritence
 
-class Father{
-    constructor(name,age){
-        this.name = name;
-        this.age = age;
-    }
-    fathers(){
-        return `My name is ${this.name}`
+// closure 
+function closureFun() {
+    let a = 1;
+    return function () {
+        console.log(a++)
     }
 }
+// console.dir(closureFun())
+// function hoisting() {
+//     let b
+//     b = 34;
+//     console.log(b)
 
-
-class mother extends Father{
-    constructor(name,age,children){
-        super(name,age)
-        this.children = children;
-    }
-    mother(){
-        return `My childs is ${this.children}`
-    }
-    // get getName (){
-    //     console.log("I am getter")
-    // }
-//    set setNames (name){
-//     this.name = name;
-//    }
-// static isEqual (class1,class2){
-//     return class1.age === class2.age
 // }
-// polimorfijon
-fathers(){
-    super.fathers()
-    return `My name is ${this.name} . her old is 5`
-}
-}
+// hoisting()
 
 
-
-let ClassObj1 = new mother("Babul howlader", 55, 2);
-let ClassObj2 = new mother("Babul howlader", 55, 2);
-// ClassObj.setNames = "mahin";
-
-console.log(ClassObj1.fathers())
