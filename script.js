@@ -206,13 +206,145 @@ function closureFun() {
         console.log(a++)
     }
 }
+
+
+
+
+
+// hoisting()
 // console.dir(closureFun())
 // function hoisting() {
 //     let b
 //     b = 34;
-//     console.log(b)
+// //     console.log(b)
 
+// // }
+// // hoisting()
+
+// // callback 
+
+// function callback( a){
+//     console.log(`Good morning ${a}`)
 // }
-// hoisting()
+
+// function callbackEvening( a){
+//     console.log(`Good evening ${a}`)
+// }
+// function callbackNight( a){
+//     console.log(`Good callbackNight ${a}`)
+// }
+// function call(callback,name){
+//     callback(name)
+//     // callback(callback2, "Mahin")
+// }
 
 
+
+// setTimeout( () => {
+//     call(callback, "mahin")
+// }, 2000)
+
+// // call(callback, "adib")
+// // call(callback, "hasan")
+// // call(callbackEvening, "hasan")
+// // call(callbackEvening, "hasan")
+// // call(callbackNight, "hasan")
+
+
+
+
+
+// function submit (num1, num2, submitsCall, instagram){
+//         if(num1 === 10){
+//             setTimeout(() => {
+//                 submitsCall();
+//             },2000)
+//         }else{
+//             instagram()
+//         }
+// }
+
+
+
+// function facebookData (){
+//     alert("My price is daynamic")
+// }
+// function instagram (){
+//     alert ("I am instagram")
+// }
+
+// let number1 = 10;
+// let number2 = 20;
+// submit(number1, number2, facebookData, instagram)
+// // submit(number1, number2, instagram)
+
+
+
+
+
+// // this
+// implicit binding
+// let sakib = {
+//     name : "mahin",
+//     age : 20
+// }
+
+// let mahin = {
+//     name : "Hasan",
+//     age : 22
+// }
+
+// let f = function (naem ,age){
+//     let o = {
+//         myName : naem,
+//         myage : age,
+//         printName : function(){
+//             console.log(`"Her name is ${this.myage}"`)
+//         },
+//         father : {
+//             Name : "How how kali",
+//             fatherName : function(){
+//                 console.log(`"Her name is ${this.Name}"`)
+//             },
+//         }
+//     }
+//     return o;
+// }
+
+// let fun = f("soniaka", 2343434)
+// fun.father.fatherName()
+
+
+
+
+// explicit binding call
+// let f = function (h1,h2){
+//     console.log(`${this.name} is ${h1} and ${h2}`)
+// }
+
+// let obj = {
+//     name : "Mahin howlader",
+//     age : 3433434
+// }
+
+
+// let h1 = "All rounder";
+// let h2 = "Half rounder";
+// f.call(obj, h1,h2)
+
+
+
+// apply
+let f = function (h1,h2){
+    console.log(`${this.name} is ${h1} and ${h2}`)
+}
+
+let obj = {
+    name : "Mahin howlader",
+    age : 3433434
+}
+
+
+let h1 = "All rounder";
+let h2 = "Half rounder";
+f.call(obj, h1,h2)
